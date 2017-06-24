@@ -1,0 +1,52 @@
+style {
+  .progress-indicator__container {
+    background-color: tomato;
+    border-radius: 100%;
+    height: 100px;
+    position: relative;
+    width: 100px;
+  }
+
+  .progress-indicator__inner-circle {
+    background-color: white;
+    border-radius: 100%;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 20;
+  }
+
+  .progress-indicator__left-half:after {
+    background-color: chocolate;
+    border-radius: 100%;
+    bottom: -10px;
+    content: " ";
+    left: -10px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    z-index: 10;
+    clip: rect(0, 60px, 120px, 0);
+  }
+
+  .progress-indicator__right-half:after {
+    background-color: red;
+    border-radius: 100%;
+    bottom: -10px;
+    content: " ";
+    left: -10px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    z-index: 10;
+    clip: rect(0, 120px, 120px, 60px);
+  }
+}
+
+<div class="progress-indicator__container">
+    <div class="progress-indicator__inner-circle" />
+    <div class="progress-indicator__left-half" />
+    <div class="progress-indicator__right-half" />
+</div>
