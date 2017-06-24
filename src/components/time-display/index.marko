@@ -1,0 +1,10 @@
+class {
+  msToMinutes(ms) {
+    // convert milliseconds to minutes
+    return parseInt(ms / 60 / 1000, 10);
+  }
+}
+
+$ var minutes = component.msToMinutes(input.timeInMs);
+
+<h1>${minutes}</h1>
